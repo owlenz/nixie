@@ -1,11 +1,11 @@
-#+TITLE: defect's nixos
+#+TITLE: nixie
 #+AUTHOR: owlenz 
 
 My humble nixos configuration, done the [[https://github.com/mightyiam/dendritic][den]] way.
 
 * How may this poor soul install your mighty dotfiles
 
-You need to add your machine/host configuration in the `modules/hosts` directory
+You need to add your machine/host configuration in the `modules/hosts` directory -- you may need to edit some hardware configuration in `modules/nixos/hardware`
 
 #+begin_src zsh
   just # for commands
