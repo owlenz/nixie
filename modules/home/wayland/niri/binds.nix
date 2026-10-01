@@ -19,6 +19,9 @@
           "Mod+C".action = close-window;
           "Mod+Alt+L".action = spawn "swaylock";
 
+          XF86Favorites = {
+            action = spawn-sh "xdg-open 'http://127.0.0.1:3000/' ";
+          };
           XF86AudioRaiseVolume = {
             allow-when-locked = true;
             action = spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+";

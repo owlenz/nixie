@@ -15,10 +15,18 @@
           enable = true;
           package = pkgs.yaml-language-server;
           settings = {
-            yaml.schemas = {
+            schemas = {
+              kubernetes = [
+                "k8s/**/*.yaml"
+                "*deployment*.yaml"
+                "*service*.yaml"
+              ];
               "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/github-workflow.json" =
                 "/.github/workflows/*.{yml,yaml}";
             };
+            validate = true;
+            completion = true;
+            hover = true;
           };
         };
         nixd = {

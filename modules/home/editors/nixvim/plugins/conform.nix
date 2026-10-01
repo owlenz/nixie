@@ -8,12 +8,14 @@
     shellcheck
     nixfmt
     tombi
+    shfmt
+    shellharden
   ];
   plugins.conform-nvim = {
     enable = true;
     settings = {
       formatters_by_ft = {
-        bash = [
+        sh = [
           "shellcheck"
           "shellharden"
           "shfmt"

@@ -14,8 +14,8 @@
     {
       home.packages = [
         # pkgs.chromium
-        inputs.helium.packages.${pkgs.system}.default
-        # inputs.nixpkgs-unstable-brave.legacyPackages.${pkgs.system}.
+        inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
+        # inputs.nixpkgs-unstable-brave.legacyPackages.${pkgs.stdenv.hostPlatform.system}.
         pkgs.brave-origin
       ];
 

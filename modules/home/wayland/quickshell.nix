@@ -14,11 +14,11 @@
     { pkgs, inputs, ... }:
     {
       home.packages = [
-        inputs.qml-niri.packages.${pkgs.system}.default
-        inputs.quickshell.packages.${pkgs.system}.default
+        inputs.qml-niri.packages.${pkgs.stdenv.hostPlatform.system}.default
+        inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
       # environment.variables.QML_IMPORT_PATH = "${
-      #   inputs.quickshell.packages.${pkgs.system}.default
+      #   inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
       # }/lib/qt-6/qml";
     };
 }

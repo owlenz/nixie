@@ -19,7 +19,7 @@
       ];
       xmonad-eco = with pkgs; [
         xterm
-        rofi
+        # rofi
         dmenu
         xclip
       ];

@@ -9,9 +9,9 @@
       rustPkgs = pkgs.extend inputs.rust-overlay.overlays.default;
     in
     {
-      nixpkgs.overlays = [
-        inputs.rust-overlay.overlays.default
-      ];
+      # nixpkgs.overlays = [
+      #   inputs.rust-overlay.overlays.default
+      # ];
       home.packages = [
         (rustPkgs.rust-bin.stable.latest.default.override {
           extensions = [

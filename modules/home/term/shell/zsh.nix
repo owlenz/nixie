@@ -8,8 +8,16 @@ in
     {
       home.sessionVariables = {
         SHELL = "${pkgs.zsh}/bin/zsh";
+
+        AWS_DEFAULT_REGION = "us-east-1";
+        AWS_ACCESS_KEY_ID = "LKIAQAAAAAAACXUCJRHF";
+        AWS_SECRET_ACCESS_KEY = "LUo8lOM5YCJJe4vNt3/WRBW/i6YQYdpjVle7ZgQW";
+        AWS_ENDPOINT_URL = "http://localhost:4566";
       };
-      home.packages = with pkgs; [ nix-zsh-completions ];
+      home.packages = with pkgs; [
+        nix-zsh-completions
+        awscli2
+      ];
 
       programs.zsh = {
         enable = true;
@@ -84,13 +92,13 @@ in
           passC = "cat ~/Documents/xdd/pass | wl-copy";
           notes = "cd ~/Documents/notes; nvim";
         };
-
         oh-my-zsh = {
           enable = true;
           plugins = [
             "git"
             "golang"
             "docker"
+            "aws"
             "podman"
             "tmux"
             "tmuxinator"

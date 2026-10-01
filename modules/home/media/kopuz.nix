@@ -7,6 +7,6 @@
   flake.modules.homeManager.kopuz =
     { pkgs, inputs, ... }:
     {
-      home.packages = [ inputs.kopuz.packages.${pkgs.system}.default ];
+      home.packages = [ inputs.kopuz.packages.${pkgs.stdenv.hostPlatform.system}.default ];
     };
 }

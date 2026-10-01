@@ -6,7 +6,7 @@
       enable = true;
       dbBackend = "sqlite";
       config = {
-        DOMAIN = "https://192.168.1.100";
+        DOMAIN = "https://vaultowlenz.duckdns.org";
         SIGNUPS_ALLOWED = true;
         ROCKET_ADDRESS = "0.0.0.0";
         ROCKET_PORT = 8222;
@@ -25,9 +25,9 @@
       };
     };
 
-    # networking.extraHosts = ''
-    #   127.0.0.1 vault.owlenz.xyz
-    # '';
+    networking.extraHosts = ''
+      127.0.0.1 vaultowlenz.duckdns.org
+    '';
 
     networking.firewall.allowedTCPPorts = [ 8222 ];
   };
