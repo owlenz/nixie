@@ -37,6 +37,7 @@
       ];
       home.packages =
         niri-eco
+        # hyprland-eco
         # ++ xmonad-eco
         ++ (with pkgs; [
           wl-clipboard

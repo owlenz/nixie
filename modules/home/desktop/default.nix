@@ -14,6 +14,9 @@
       };
       programs.zathura = {
         enable = true;
+        options = {
+          selection-clipboard = "clipboard";
+        };
         mappings = {
           "d" = "scroll half-down";
           "u" = "scroll half-up";

@@ -8,11 +8,12 @@ in
     {
       home.sessionVariables = {
         SHELL = "${pkgs.zsh}/bin/zsh";
+        EDITOR = editor;
 
-        AWS_DEFAULT_REGION = "us-east-1";
-        AWS_ACCESS_KEY_ID = "LKIAQAAAAAAACXUCJRHF";
-        AWS_SECRET_ACCESS_KEY = "LUo8lOM5YCJJe4vNt3/WRBW/i6YQYdpjVle7ZgQW";
-        AWS_ENDPOINT_URL = "http://localhost:4566";
+        # AWS_DEFAULT_REGION = "us-east-1";
+        # AWS_ACCESS_KEY_ID = "LKIAQAAAAAAACXUCJRHF";
+        # AWS_SECRET_ACCESS_KEY = "LUo8lOM5YCJJe4vNt3/WRBW/i6YQYdpjVle7ZgQW";
+        # AWS_ENDPOINT_URL = "http://localhost:4566";
       };
       home.packages = with pkgs; [
         nix-zsh-completions
@@ -23,7 +24,7 @@ in
         enable = true;
         autosuggestion = {
           enable = true;
-          highlight = "fg=#585b70";
+          # highlight = "fg=#585b70";
         };
         syntaxHighlighting.enable = true;
         autocd = true;
@@ -66,6 +67,7 @@ in
           i3C = "cd ~/.config/i3/ ; ${editor}";
           zshC = "${editor} ~/.zshrc";
           starC = "${editor} ~/.config/starship/starship.toml";
+          nixC = "cd ~/dotfiles; ${editor}";
 
           ### QOL aliases ###
           ".." = "cd ..";
@@ -79,8 +81,8 @@ in
           xpick = "xcolor | xclip -sel clip";
           ### eza ###
           ls = "eza --icons=always --group-directories-first";
-          ll = "eza -bglF --icons always";
-          tree = "eza --tree --icons";
+          ll = "eza -bglF --group-directories-first --icons always";
+          tree = "eza --tree --icons always";
 
           # nix aliases
           nrf = "sudo nixos-rebuild switch --flake ~/dotfiles";
@@ -100,6 +102,8 @@ in
             "docker"
             "aws"
             "podman"
+            "kubectl"
+            "minikube"
             "tmux"
             "tmuxinator"
             "emacs"

@@ -2,11 +2,13 @@
   flake.modules.homeManager.tmux = { config, pkgs, ... }: {
     programs.tmux = {
       enable = true;
+
       focusEvents = true;
       sensibleOnTop = true;
 
       prefix = "C-b";
       baseIndex = 1;
+
       shell = "${pkgs.zsh}/bin/zsh";
       terminal = "tmux-256color";
       mouse = true;
@@ -45,11 +47,6 @@
             -h 80% \
             -E "lazygit"
 
-        set -g status-style bg=default
-        set -g window-status-style bg=default
-        set -g window-status-current-style bg=default
-        set -g pane-active-border-style bg=default
-        set -g pane-border-style bg=default
       '';
 
       plugins = with pkgs.tmuxPlugins; [
@@ -59,19 +56,19 @@
         {
           plugin = yank;
         }
-        {
-          plugin = resurrect;
-          extraConfig = ''
-            set -g @resurrect-strategy-nvim 'session' # Restore Neovim sessions
-          '';
-        }
-        {
-          plugin = continuum;
-          extraConfig = ''
-            set -g @continuum-restore 'on'
-            set -g @continuum-save-interval '10' # in minutes
-          '';
-        }
+        # {
+        #   plugin = resurrect;
+        #   extraConfig = ''
+        #     set -g @resurrect-strategy-nvim 'session' # Restore Neovim sessions
+        #   '';
+        # }
+        # {
+        #   plugin = continuum;
+        #   extraConfig = ''
+        #     set -g @continuum-restore 'on'
+        #     set -g @continuum-save-interval '10' # in minutes
+        #   '';
+        # }
       ];
     };
   };

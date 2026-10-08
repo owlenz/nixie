@@ -24,7 +24,8 @@
         base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
 
         targets.emacs.enable = false;
-        targets.zathura.enable = true;
+        # targets.zathura.enable = false;
+
         targets.nixvim = {
           enable = false;
           plugin = "base16-nvim";

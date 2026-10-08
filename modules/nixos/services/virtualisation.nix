@@ -1,8 +1,6 @@
 {
   flake.modules.nixos.virt =
     {
-      pkgs,
-      inputs,
       config,
       ...
     }:
@@ -16,11 +14,11 @@
           enable = true;
         };
         docker = {
-          enable = false;
-          rootless = {
-            enable = true;
-            setSocketVariable = true;
-          };
+          enable = true;
+          # rootless = {
+          #   enable = true;
+          #   setSocketVariable = true;
+          # };
 
           daemon.settings = {
             features.cdi = true;
@@ -42,8 +40,8 @@
         privateNetwork = true;
         hostAddress = "192.168.100.10";
         localAddress = "192.168.100.11";
-        config = { pkgs, config, ... }: {
-          system.stateVersion = "24.05";
+        config = { pkgs, ... }: {
+          system.stateVersion = "26.05";
           programs.zsh.enable = true;
           users.users.owlenz = {
             isNormalUser = true;
@@ -60,7 +58,6 @@
           };
 
           networking.firewall.allowedTCPPorts = [
-            8080
             80
             443
           ];

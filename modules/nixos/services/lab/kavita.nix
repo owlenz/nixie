@@ -24,7 +24,7 @@
     };
 
     virtualisation.oci-containers = {
-      backend = "podman";
+      backend = "docker";
       containers.komf = {
         image = "docker.io/sndxr/komf:latest";
         ports = [ "8085:8085" ];

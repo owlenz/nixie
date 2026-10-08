@@ -11,6 +11,7 @@
         ];
         signing.format = null;
         settings = {
+          init.defaultBranch = "main";
           user = {
             name = "Saif Al-Din Samy";
             email = "saifowlenzz@gmail.com";

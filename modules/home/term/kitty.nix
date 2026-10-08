@@ -6,7 +6,7 @@
 
       settings = {
         update_check_interval = "0";
-        enable_audio_bell = "no";
+        enable_audio_bell = "yes";
 
         window_border_width = "0pt";
         draw_minimal_borders = "yes";

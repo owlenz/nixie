@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: audiobookshelf
+  labels:
+    name: abs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: abs
+  template:
+    spec:
+      containers:
+        - name: audiobookshelf
+          image: advplyr/audiobookshelf:2.37.1
+          ports:
+            - containerPort: 80
+              hostPort: 5002
+          volumeMounts:
+            - mountPath:
+              name:
+
+
+
+

@@ -13,7 +13,6 @@
         "$mainMod, R, exec, fuzzel"
         "$mainMod, P, pseudo,"
         "$mainMod, F, fullscreen"
-        "$mainMod, J, togglesplit,"
 
         # Screenshots
         ", Print, exec, grim -g \"$(slurp)\""

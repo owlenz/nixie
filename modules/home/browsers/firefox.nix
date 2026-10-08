@@ -1,9 +1,12 @@
 {
+  flake-file.inputs.nixpkgs-firefox = {
+    url = "github:NixOS/nixpkgs/nixos-unstable";
+  };
   flake.modules.homeManager.firefox =
-    { pkgs, ... }:
+    { pkgs, inputs, ... }:
     {
-      home.packages = with pkgs; [
-        firefox
+      home.packages = [
+        inputs.nixpkgs-firefox.legacyPackages.${pkgs.stdenv.hostPlatform.system}.firefox
       ];
     };
 }

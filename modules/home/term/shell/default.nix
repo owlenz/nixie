@@ -39,6 +39,12 @@
         unzip
         feh
 
+        fastfetch
+
+        ## parsing
+        jq
+        yq
+
         ## man pages
         man-pages
         man-pages-posix

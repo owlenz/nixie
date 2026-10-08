@@ -19,6 +19,7 @@
           "owlenz"
           "krkp"
           "naviz"
+          "absoz"
         ];
         usev4 = "webv4";
         usev6 = "disabled";
