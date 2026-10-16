@@ -4,7 +4,7 @@
 }:
 {
   flake.modules.nixos.nix =
-    { ... }:
+    { pkgs, ... }:
     {
       programs.nh = {
         enable = true;
@@ -12,6 +12,14 @@
         clean.extraArgs = "--keep-since 4d --keep 3";
         flake = "/home/owlenz/dotfiles";
       };
+      programs.nix-ld.enable = true;
+      programs.nix-ld.libraries = with pkgs; [
+        stdenv.cc.cc.lib
+        openssl
+        zlib
+      ];
+      services.envfs.enable = true;
+
       nix.registry.nixpkgs.flake = inputs.nixpkgs;
       nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
       nix.settings = {

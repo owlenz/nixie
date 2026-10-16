@@ -1,7 +1,7 @@
 { config, ... }:
 {
   flake.modules.nixos.services =
-    { ... }:
+    { pkgs, ... }:
     {
       imports = [
         config.flake.modules.nixos.dm
@@ -13,12 +13,13 @@
       ];
       programs.wireshark.enable = true;
 
+      environment.systemPackages = with pkgs; [ local.fluxcast ];
       services = {
         gvfs.enable = true;
         blueman.enable = true;
-        # xserver.videoDrivers = [ "nvidia" ];
         flatpak.enable = true;
         cloudflare-warp.enable = true;
+        dbus.packages = with pkgs; [ local.fluxcast ];
       };
 
       # virtualisation.oci-containers = {

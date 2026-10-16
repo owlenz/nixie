@@ -1,4 +1,4 @@
-{
+{ config, ... }: {
   flake.modules.nixos.p03Configuration =
     { pkgs, ... }:
     {
@@ -53,6 +53,11 @@
       networking.firewall.enable = false;
       nixpkgs.config.allowUnfree = true;
       system.stateVersion = "26.05";
+
+      imports = [
+        config.flake.modules.nixos.root
+        config.flake.modules.nixos.graphics-amd
+      ];
 
       nix.settings.experimental-features = [
         "nix-command"

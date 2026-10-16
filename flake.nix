@@ -11,6 +11,10 @@
     inputs.flake-parts.lib.mkFlake { inherit inputs; } (tree ./modules);
 
   inputs = {
+    egs-flake = {
+      url = "github:svin24/egs-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";

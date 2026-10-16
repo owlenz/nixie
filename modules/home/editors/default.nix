@@ -6,5 +6,9 @@
       zed
       nixvim
     ];
+    home.packages = [
+      pkgs.cursor-cli
+      # pkgs.opencode
+    ];
   };
 }

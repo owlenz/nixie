@@ -1,4 +1,8 @@
 {
+  flake-file.inputs.egs-flake = {
+    url = "github:svin24/egs-flake";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
   flake.modules.nixos.gaming =
     { pkgs, ... }:
     {
@@ -34,6 +38,7 @@
         };
       };
       environment.systemPackages = with pkgs; [
+        # inputs.egs-flake.packages.${pkgs.system}.epic-games-launcher
         mangohud
         protonup-qt
         protontricks
@@ -54,7 +59,10 @@
       # };
 
       users.users.owlenz = {
-        extraGroups = [ "uinput" "gamemode" ]; 
+        extraGroups = [
+          "uinput"
+          "gamemode"
+        ];
       };
     };
 }

@@ -25,6 +25,12 @@
         bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "wl-copy && wl-paste -n | wl-copy -p"
         unbind -T copy-mode-vi MouseDragEnd1Pane
 
+
+        ## resizing panes
+        bind -r C-h resize-pane -L 5
+        bind -r C-j resize-pane -D 5
+        bind -r C-k resize-pane -U 5
+        bind -r C-l resize-pane -R 5
         bind-key p run "wl-paste -n | tmux load-buffer - ; tmux paste-buffer"
 
         unbind '%'

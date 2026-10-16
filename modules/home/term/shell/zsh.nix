@@ -73,7 +73,6 @@ in
           ".." = "cd ..";
           vim = "nvim";
           nivm = "nvim";
-          tx = "tmux";
           ec = "emacs-client -c";
           icat = "kitten icat";
 
@@ -89,6 +88,8 @@ in
           nr = "sudo nixos-rebuild switch";
           nsp = "nix search nixpkgs";
           nlp = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort -u";
+
+          k = "kubectl";
 
           ### personal aliases ###
           passC = "cat ~/Documents/xdd/pass | wl-copy";

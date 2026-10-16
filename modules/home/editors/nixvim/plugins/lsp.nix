@@ -11,6 +11,14 @@
         # taplo.enable = true;
         bashls.enable = true;
         # nil_ls.enable = true;
+
+        ruff = {
+          enable = true;
+        };
+        clangd = {
+          enable = true;
+          package = null;
+        };
         yamlls = {
           enable = true;
           package = pkgs.yaml-language-server;

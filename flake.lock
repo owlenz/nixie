@@ -83,6 +83,26 @@
         "type": "github"
       }
     },
+    "egs-flake": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792040652,
+        "narHash": "sha256-sU8xY3zpgkGQE77o27OuXIfWbOK4usYFn6Itbw/+jzM=",
+        "owner": "svin24",
+        "repo": "egs-flake",
+        "rev": "a7fe4b52b02b46302ebf0cbf978f6857b65963bf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "svin24",
+        "repo": "egs-flake",
+        "type": "github"
+      }
+    },
     "emacs-overlay": {
       "inputs": {
         "nixpkgs": [
@@ -679,6 +699,7 @@
     },
     "root": {
       "inputs": {
+        "egs-flake": "egs-flake",
         "emacs-overlay": "emacs-overlay",
         "flake-file": "flake-file",
         "flake-parts": "flake-parts",

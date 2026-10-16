@@ -5,6 +5,10 @@
       services.jellyfin = {
         enable = true;
         openFirewall = true;
+        hardwareAcceleration = {
+          enable = true;
+          device = "/dev/dri/renderD128";
+        };
       };
       environment.systemPackages = with pkgs; [
         jellyfin
@@ -19,6 +23,10 @@
           extraConfig = "reverse_proxy 127.0.0.1:8096";
         };
       };
+
+      systemd.tmpfiles.rules = [
+        "d /var/lib/jellyfin 0750 jellyfin jellyfin -"
+      ];
 
       networking.extraHosts = ''
         127.0.0.1 fin.owlenz.xyz

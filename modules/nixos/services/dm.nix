@@ -8,7 +8,11 @@
       ];
       services.displayManager.ly.enable = false;
 
-      services.xserver.displayManager.gdm = {
+      # services = {
+      #   desktopManager.plasma6.enable = true;
+      #   displayManager.plasma-login-manager.enable = true;
+      # };
+      services.displayManager.gdm = {
         enable = true;
       };
 

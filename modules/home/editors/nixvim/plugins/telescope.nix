@@ -46,9 +46,9 @@ in
       defaults = {
         preview = false;
         theme = "ivy";
-        layout_config = {
-          height = 0.5;
-        };
+        # layout_config = {
+        #   height = 0.5;
+        # };
         mappings = {
           i = {
             "<C-j>" = "move_selection_next";

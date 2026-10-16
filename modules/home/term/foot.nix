@@ -18,8 +18,11 @@
           '';
         };
 
-		server.enable = true;
+        server.enable = true;
         settings = {
+          colors-dark = {
+            alpha-mode = "all";
+          };
           main = {
             pad = "0x0";
           };

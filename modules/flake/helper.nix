@@ -47,7 +47,6 @@ in
               inherit inputs;
             };
             modules = [
-              config.flake.modules.nixos.root
               (config.flake.modules.nixos."${hostname}Home" or { })
               (config.flake.modules.nixos."${hostname}Configuration" or { })
               (config.flake.modules.nixos."${hostname}Hardware" or { })

@@ -19,7 +19,7 @@ activate *args:
 
 # builds and switches to the new configuration
 switch *args:
-    sudo nixos-rebuild switch --flake .#{{host}} {{args}}
+  nh os switch {{args}} .#{{host}}
 
 # only shows changes
 dry *args:

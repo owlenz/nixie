@@ -22,7 +22,6 @@
         just
         at
         bat
-        btop
         htop
         lazygit
 

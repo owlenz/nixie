@@ -3,6 +3,9 @@
     nvim-surround = {
       enable = true;
     };
+    markdown-preview = {
+      enable = true;
+    };
     flash = {
       enable = true;
     };
@@ -18,10 +21,10 @@
         legacy_commands = false;
         new_notes_location = "current_dir";
         # workspaces = [
-          # {
-          #   name = "study";
-          #   path = "~/Documents/obsidian/test";
-          # }
+        # {
+        #   name = "study";
+        #   path = "~/Documents/obsidian/test";
+        # }
         # ];
       };
     };
