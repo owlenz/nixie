@@ -10,15 +10,20 @@
         ispell
         dockerfile-language-server
 
+        go
+        gotools
+        gopls
+
         (pkgs.unityhub.override {
-          extraPkgs = pkgs: with pkgs; [
-            gst_all_1.gstreamer
-            gst_all_1.gst-plugins-base
-            gst_all_1.gst-plugins-good
-            gst_all_1.gst-plugins-bad
-            gst_all_1.gst-plugins-ugly
-            gst_all_1.gst-libav
-          ];
+          extraPkgs =
+            pkgs: with pkgs; [
+              gst_all_1.gstreamer
+              gst_all_1.gst-plugins-base
+              gst_all_1.gst-plugins-good
+              gst_all_1.gst-plugins-bad
+              gst_all_1.gst-plugins-ugly
+              gst_all_1.gst-libav
+            ];
         })
       ];
       imports = [

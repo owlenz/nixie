@@ -16,11 +16,14 @@ in
     services.hister = {
       enable = true;
       dataDir = "/var/lib/hister";
-      port = 4433;
+      # port = 4433;
       settings = {
         app = {
           search_url = ddg_url;
         };
+        server.address = "0.0.0.0:4433";
+        server.base_url = "http://192.168.1.104:4433";
+
       };
     };
   };

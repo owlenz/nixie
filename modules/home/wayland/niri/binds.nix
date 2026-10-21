@@ -12,7 +12,7 @@
             "Mod+E".action = spawn "nautilus";
             "Mod+R".action = spawn "fuzzel";
             ## hister
-            "Mod+S".action = spawn-sh "xdg-open 'http://127.0.0.1:4433/' ";
+            "Mod+S".action = spawn-sh "xdg-open 'http://192.168.1.104:4433/' ";
             "Mod+W".action = spawn-sh "hyprpicker | tail -c +1 | head -c -1 | wl-copy";
             "Mod+Tab" = {
               action = toggle-overview;
@@ -23,7 +23,7 @@
             "Mod+Alt+L".action = spawn "swaylock";
 
             XF86Favorites = {
-              action = spawn-sh "xdg-open 'http://127.0.0.1:3000/' ";
+              action = spawn-sh "xdg-open 'http://krkp.duckdns.org'";
             };
             XF86AudioRaiseVolume = {
               allow-when-locked = true;
