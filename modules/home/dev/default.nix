@@ -14,6 +14,8 @@
         gotools
         gopls
 
+        gh
+
         (pkgs.unityhub.override {
           extraPkgs =
             pkgs: with pkgs; [

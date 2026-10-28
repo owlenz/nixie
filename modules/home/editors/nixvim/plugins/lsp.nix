@@ -15,6 +15,10 @@
         ruff = {
           enable = true;
         };
+
+        ty = {
+          enable = true;
+        };
         clangd = {
           enable = true;
           package = null;

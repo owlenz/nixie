@@ -9,27 +9,27 @@
           openFirewall = true;
         };
         ## cloudflare bypassing
-        flaresolverr = {
-          enable = true;
-          openFirewall = true;
-        };
+        # flaresolverr = {
+        #   enable = true;
+        #   openFirewall = true;
+        # };
         ## movie & tv show requesting
-        seerr = {
-          enable = true;
-          openFirewall = true;
-        };
-        # movies
-        radarr = {
-          enable = true;
-          user = "arr";
-          openFirewall = true;
-        };
-        # tv shows
-        sonarr = {
-          enable = true;
-          user = "arr";
-          openFirewall = true;
-        };
+        # seerr = {
+        #   enable = true;
+        #   openFirewall = true;
+        # };
+        # # movies
+        # radarr = {
+        #   enable = true;
+        #   user = "arr";
+        #   openFirewall = true;
+        # };
+        # # tv shows
+        # sonarr = {
+        #   enable = true;
+        #   user = "arr";
+        #   openFirewall = true;
+        # };
         # subtitles
         bazarr = {
           enable = true;

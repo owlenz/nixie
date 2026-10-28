@@ -15,7 +15,7 @@
         ## streaming media
         config.flake.modules.nixos.jellyfin
         ## *arr services
-        # config.flake.modules.nixos.arr
+        config.flake.modules.nixos.arr
         ## password manager
         config.flake.modules.nixos.vaultwarden
         ## music

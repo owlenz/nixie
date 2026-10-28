@@ -1,7 +1,8 @@
 {
   flake.modules.nixos.ssh =
-    { ... }:
+    { pkgs, ... }:
     {
+      environment.systemPackages = [ pkgs.openssl ];
       services.openssh = {
         enable = true;
         ports = [ 22 ];
