@@ -10,7 +10,7 @@
     in
     {
       programs.emacs = {
-        enable = true;
+        enable = false;
         package = (
           pkgs'.emacsWithPackagesFromUsePackage {
             package = pkgs'.emacs-pgtk;
@@ -33,7 +33,7 @@
         );
       };
       services.emacs = {
-        enable = true;
+        enable = false;
         startWithUserSession = "graphical";
         defaultEditor = false;
       };
